@@ -1,87 +1,77 @@
 # ESP8266 Parking System
 
-An **ESP8266-based parking/entrance access system** using RFID cards, IR sensors, and relays to control a shutter. This system supports **entry and exit validation**, **automatic shutter control**, **buzzer feedback**, and **web-based logging**.
+[![License](https://img.shields.io/github/license/hasanarmanabir93-eng/ESP8266-Parking-System)](https://github.com/hasanarmanabir93-eng/ESP8266-Parking-System/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/hasanarmanabir93-eng/ESP8266-Parking-System)](https://github.com/hasanarmanabir93-eng/ESP8266-Parking-System/stargazers)
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Hardware Required](#hardware-required)
+- [Software / Libraries](#software--libraries)
+- [Circuit Diagram](#circuit-diagram)
+- [How to Use](#how-to-use)
+- [Screenshots](#screenshots)
+- [Future Improvements](#future-improvements)
+- [License](#license)
+
+
+
+## Project Overview
+This is an **IoT-based Smart Parking System** using **ESP8266**, designed to monitor and manage parking slots efficiently. The system can detect vehicle entry/exit and update a web interface in real-time.
 
 
 ## Features
+- Real-time vehicle detection
+- Displays available parking slots
+- Web interface for monitoring
+- Easy integration with IoT dashboards
+- Compact and low-cost setup
 
-- Entry and exit control using **RDM6300 RFID readers**
-- Vehicle detection using **IR sensor**
-- Automatic shutter control (**Up, Down, Stop** relays)
-- Buzzer feedback on card scan
-- Web-based logging using **HTTP POST** requests
-- OTA updates using **AsyncElegantOTA**
-- Real-time serial monitoring via **WebSerial**
+
+## Hardware Required
+- ESP8266 (NodeMCU / D1 Mini)
+- Ultrasonic Sensor (HC-SR04) for vehicle detection
+- LEDs / Display (optional)
+- Wires and breadboard
+- Power supply (5V)
 
 ---
 
-## Components
-
-- ESP8266 (D1 Mini / NodeMCU)
-- 2 × RDM6300 RFID Readers
-- IR Sensor
-- 3 × Relays (Up, Down, Stop)
-- Buzzer
-- Connecting wires and power supply
-
-
-
-## Pin Configuration
-
-| Component        | ESP8266 Pin |
-|-----------------|-------------|
-| RDM6300 IN       | D1 (GPIO5) |
-| RDM6300 OUT      | D2 (GPIO4) |
-| IR Sensor        | D5 (GPIO14)|
-| Relay Up         | D7 (GPIO13)|
-| Relay Down       | D6 (GPIO12)|
-| Relay Stop       | D8 (GPIO15)|
-| Buzzer           | A0         |
+## Software / Libraries
+- Arduino IDE
+- ESP8266 Board package
+- Libraries:
+  - `ESP8266WiFi.h`
+  - `ESPAsyncWebServer.h`
+  - `ESPAsyncTCP.h`
+  - Other supporting libraries in the `lib/` folder
 
 
-## Wiring Diagram
-
-![Wiring Diagram](diagram/wiring_diagram.png)
-
-*(Connect relays, IR sensor, buzzer, and RFID readers as shown in the diagram.)*
+## Circuit Diagram
+![Circuit Diagram](hardware/Schematic.png)
 
 
-
-Usage
-
-1. Connect all components according to the wiring diagram.
-2. Open the Arduino IDE.
-3. Install the following libraries:
-   - ESP8266WiFi
-   - rdm6300
-   - WebSerial
-   - ESPAsyncTCP
-   - AsyncElegantOTA
-   - ESPAsyncWebServer
-   - ESPAsyncWiFiManager
-   - ESP8266HTTPClient
-4. Update the `serverName2` variable with your server URL.
-5. Upload the code to ESP8266.
-6. Access the WebSerial via your browser to monitor logs.
-7. Use **AsyncElegantOTA** for over-the-air updates at `http://<ESP_IP>/update`.
+## How to Use
+1. Connect the ESP8266 and sensors as per the schematic.
+2. Upload the code using Arduino IDE.
+3. Connect ESP8266 to your Wi-Fi.
+4. Open the provided web interface to monitor parking slots in real-time.
 
 
-## How it Works
-
-1. Vehicle approaches → IR sensor detects presence → system ready.
-2. Scan card at entry (RDM6300 IN):
-   - Checks with server
-   - Opens shutter if valid
-3. Vehicle passes → shutter closes automatically.
-4. Scan card at exit (RDM6300 OUT):
-   - Checks with server
-   - Opens shutter if valid
-5. All logs sent to server for tracking.
+## Screenshots
+![System Screenshot](hardware/ESP8266-Parking-System.png)
 
 
+## Future Improvements
+- Mobile app integration
+- Firebase or cloud database support
+- Multiple slot management
+- SMS/Notification for full parking alerts
 
 ## License
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
-This project is **open-source**. You can freely use and modify it.
+**Author:** Hasan Arman Abir  
+**GitHub:** [hasanarmanabir93-eng](https://github.com/hasanarmanabir93-eng)  
+**Contact:** hasanarman.abir93@gmail.com
 
