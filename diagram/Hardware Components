@@ -1,0 +1,47 @@
+Hardware Components
+
+ESP8266 (D1 Mini or NodeMCU)
+
+Pins used:
+
+D1 (GPIO5) → RDM6300_1_RX_PIN (RFID IN)
+
+D2 (GPIO4) → RDM6300_2_RX_PIN (RFID OUT)
+
+D5 (GPIO14) → IR sensor
+
+D6 (GPIO12) → Relay Down
+
+D7 (GPIO13) → Relay Up
+
+D8 (GPIO15) → Relay Stop
+
+A0 → Buzzer
+
+RDM6300 RFID readers
+
+Reader 1 → Entry
+
+Reader 2 → Exit
+
+Relays (3x)
+
+Control motor to open/close shutter
+
+Up, Down, Stop
+
+IR Sensor
+
+Detect vehicle presence
+
+Buzzer
+
+Feedback on card detection
+
+Web/OTA
+
+AsyncElegantOTA for OTA updates
+
+WebSerial for logging
+
+HTTP POST to log access in database
