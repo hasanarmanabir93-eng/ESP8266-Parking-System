@@ -47,9 +47,6 @@ This is an **IoT-based Smart Parking System** using **ESP8266**, designed to mon
   - Other supporting libraries in the `lib/` folder
 
 
-## Circuit Diagram
-![Circuit Diagram](hardware/Schematic.png)
-
 
 ## How to Use
 1. Connect the ESP8266 and sensors as per the schematic.
