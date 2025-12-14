@@ -59,7 +59,7 @@ This is an **IoT-based Smart Parking System** using **ESP8266**, designed to mon
 
 
 ## Screenshots
-![System Screenshot](hardware/ESP8266-Parking-System.png)
+![System Screenshot](hardware/Dgithub_ptojectESP8266-Parking-System.png)
 
 
 ## Future Improvements
