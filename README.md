@@ -58,10 +58,6 @@ This is an **IoT-based Smart Parking System** using **ESP8266**, designed to mon
 4. Open the provided web interface to monitor parking slots in real-time.
 
 
-## Screenshots
-![System Screenshot](hardware/Dgithub_ptojectESP8266-Parking-System.png)
-
-
 ## Future Improvements
 - Mobile app integration
 - Firebase or cloud database support
